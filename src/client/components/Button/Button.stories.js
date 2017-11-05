@@ -1,14 +1,14 @@
-import React from 'react';
-import { storiesOf, action } from '@kadira/storybook';
-import { text, select } from '@kadira/storybook-addon-knobs';
+import React from 'react'
+import { storiesOf, action } from '@kadira/storybook'
+import { text, select } from '@kadira/storybook-addon-knobs'
 
-import Button from './Button';
+import Button from './Button'
 
 const types = {
   '': '',
   primary: 'primary',
   disabled: 'disabled'
-};
+}
 
 storiesOf('Components', module).addWithInfo(
   'Button with Info',
@@ -23,4 +23,4 @@ storiesOf('Components', module).addWithInfo(
     />
   ),
   { inline: true }
-);
+)

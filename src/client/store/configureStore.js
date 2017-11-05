@@ -1,6 +1,6 @@
-import { createStore, applyMiddleware, compose } from 'redux';
-import reducer from '../reducers';
-import thunk from 'redux-thunk';
+import { createStore, applyMiddleware, compose } from 'redux'
+import reducer from '../reducers'
+import thunk from 'redux-thunk'
 
 export default function configureStore(preloadedState) {
   return createStore(
@@ -14,5 +14,5 @@ export default function configureStore(preloadedState) {
        */
       window.devToolsExtension ? window.devToolsExtension() : f => f
     )
-  );
+  )
 }

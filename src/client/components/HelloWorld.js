@@ -1,11 +1,17 @@
-import React from 'react';
-import { FormattedRelative, FormattedMessage } from 'react-intl';
-import moment from 'moment';
+import React from 'react'
+import { FormattedRelative, FormattedMessage } from 'react-intl'
+import moment from 'moment'
+import styled from 'styled-components'
+
+const HelloMessage = styled.span`
+  color: #b0b0de;
+  display: flex;
+`
 
 export default function HelloWorld() {
   return (
-    <h1 className="hw-headline">
-      <span>
+    <h1>
+      <HelloMessage>
         <FormattedMessage
           id="app.helloWorld.greeting"
           description="Greeting to welcome the user to the app"
@@ -20,7 +26,7 @@ export default function HelloWorld() {
             )
           }}
         />
-      </span>
+      </HelloMessage>
     </h1>
-  );
+  )
 }

@@ -1,10 +1,10 @@
 {
-  "name": "jahe-react-starter",
+  "name": "jahe-react-starter-2",
   "version": "1.0.0",
-  "description": "React Starter Project",
+  "description": "React Starter Project v2 - Similar to v1 but with Styled Components rather than SASS",
   "repository": {
     "type": "git",
-    "url": "https://github.com/jahe/jahe-react-starter.git"
+    "url": "https://github.com/jahe/jahe-react-starter-2.git"
   },
   "scripts": {
     "start": "node devserver.js",
@@ -23,7 +23,6 @@
     "@storybook/addon-info": "^3.2.11",
     "@storybook/addon-knobs": "^3.2.10",
     "@storybook/react": "^3.2.11",
-    "autoprefixer": "^6.7.6",
     "babel-cli": "^6.23.0",
     "babel-core": "^6.23.1",
     "babel-jest": "^19.0.0",
@@ -33,18 +32,12 @@
     "babel-preset-react": "^6.23.0",
     "babel-preset-stage-0": "^6.22.0",
     "cross-env": "^3.2.3",
-    "css-loader": "^0.26.4",
     "eslint": "^3.17.1",
     "eslint-plugin-react": "^6.10.0",
-    "extract-text-webpack-plugin": "^2.1.0",
     "jest-cli": "^19.0.2",
-    "node-sass": "^4.5.0",
-    "postcss-loader": "^1.3.3",
     "react-hot-loader": "^3.0.0-beta.7",
     "react-intl-translations-manager": "^4.0.1",
     "rimraf": "^2.6.1",
-    "sass-loader": "^6.0.3",
-    "style-loader": "^0.13.2",
     "webpack": "3.8.1",
     "webpack-dev-server": "2.9.4"
   },
@@ -52,13 +45,15 @@
     "intl": "^1.2.5",
     "json-loader": "^0.5.4",
     "moment": "^2.17.1",
+    "polished": "1.8.1",
     "prop-types": "^15.6.0",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
     "react-intl": "^2.2.3",
     "react-redux": "^5.0.3",
     "redux": "^3.6.0",
-    "redux-thunk": "^2.2.0"
+    "redux-thunk": "^2.2.0",
+    "styled-components": "2.2.3"
   },
   "jest": {
     "testEnvironment": "node",

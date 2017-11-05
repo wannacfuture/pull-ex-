@@ -6,7 +6,7 @@
 // When you add this file, we won't add the default configurations which is similar
 // to "React Create App". This only has babel loader to load JavaScript.
 
-const autoprefixer = require('autoprefixer');
+const autoprefixer = require('autoprefixer')
 
 module.exports = {
   plugins: [
@@ -17,11 +17,12 @@ module.exports = {
       // add your custom loaders.
       {
         test: /\.scss$/,
-        loader: 'style-loader!css-loader?sourceMap&importLoaders=1!postcss-loader!sass-loader?sourceMap'
+        loader:
+          'style-loader!css-loader?sourceMap&importLoaders=1!postcss-loader!sass-loader?sourceMap'
       }
     ]
   },
   postcss: function() {
-    return [autoprefixer];
+    return [autoprefixer]
   }
-};
+}
