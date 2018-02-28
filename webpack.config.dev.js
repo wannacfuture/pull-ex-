@@ -1,8 +1,8 @@
 const webpack = require('webpack')
-const autoprefixer = require('autoprefixer')
 const path = require('path')
 
 const devConfig = {
+  mode: 'development',
   devtool: 'eval',
   entry: [
     'webpack-dev-server/client?http://localhost:3333',
@@ -21,28 +21,11 @@ const devConfig = {
         test: /\.jsx?/,
         use: ['babel-loader'],
         exclude: /node_modules/
-      },
-      {
-        test: /\.scss$/,
-        use: [
-          'style-loader',
-          'css-loader?sourceMap&importLoaders=1',
-          {
-            loader: 'postcss-loader',
-            options: {
-              plugins: () => [require('autoprefixer')]
-            }
-          },
-          'sass-loader?sourceMap'
-        ]
-      },
-      {
-        test: /\.json$/,
-        loader: 'json-loader'
       }
     ]
   },
   plugins: [
+    new webpack.NamedModulesPlugin(), // to make it easier to see which dependencies are being patched
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NoEmitOnErrorsPlugin(),
     new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/)

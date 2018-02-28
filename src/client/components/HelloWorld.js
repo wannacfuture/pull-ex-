@@ -12,6 +12,7 @@ export default function HelloWorld() {
   return (
     <h1>
       <HelloMessage>
+        test23
         <FormattedMessage
           id="app.helloWorld.greeting"
           description="Greeting to welcome the user to the app"

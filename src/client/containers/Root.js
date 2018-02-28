@@ -8,7 +8,10 @@ import { Provider } from 'react-redux'
 // Import our Component
 import HelloWorld from '../components/HelloWorld.js'
 
-export default class Root extends React.Component {
+// Mark your root component as hot-exported
+import { hot } from 'react-hot-loader'
+
+class Root extends React.Component {
   constructor(props) {
     super(props)
 
@@ -19,7 +22,7 @@ export default class Root extends React.Component {
 
   render() {
     const { language } = this.state
-    const messages = require('../translations/locales/' + language + '.json')
+    const messages = require('!../translations/locales/' + language + '.json')
 
     return (
       <IntlProvider locale={language} key={language} messages={messages}>
@@ -29,7 +32,8 @@ export default class Root extends React.Component {
             <select
               value={language}
               onChange={({ target: { value } }) =>
-                this.setState({ language: value })}
+                this.setState({ language: value })
+              }
             >
               <option value="de">Deutsch</option>
               <option value="en">English</option>
@@ -41,6 +45,8 @@ export default class Root extends React.Component {
     )
   }
 }
+
+export default hot(module)(Root)
 
 Root.propTypes = {
   store: PropTypes.object.isRequired
