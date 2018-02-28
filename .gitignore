@@ -6,6 +6,7 @@ _generated/
 coverage/
 npm-debug.log
 webpack-stats.json
+yarn-error.log
 
 # https://www.jetbrains.com/webstorm/help/managing-projects-under-version-control.html
 .idea/workspace.xml

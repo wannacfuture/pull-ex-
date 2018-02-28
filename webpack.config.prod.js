@@ -1,14 +1,14 @@
 const webpack = require('webpack')
 const path = require('path')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 const prodConfig = {
   mode: 'production',
   devtool: 'source-map',
   entry: ['./src/client/main.js'],
   output: {
-    path: path.join(__dirname, 'public/dist'),
-    filename: 'app.js',
-    publicPath: '/dist/'
+    path: path.join(__dirname, 'dist'),
+    filename: 'app.js'
   },
   module: {
     rules: [
@@ -19,7 +19,12 @@ const prodConfig = {
       }
     ]
   },
-  plugins: [new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/)]
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: path.join(__dirname, 'src', 'client', 'index.tmpl.html')
+    }),
+    new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/)
+  ]
 }
 
 module.exports = prodConfig

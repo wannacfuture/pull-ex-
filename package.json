@@ -9,7 +9,7 @@
   },
   "scripts": {
     "start": "node devserver.js",
-    "build:clean": "rimraf ./public/dist",
+    "build:clean": "rimraf ./dist",
     "build:prod":
       "npm run build:clean && cross-env NODE_ENV=production webpack --config webpack.config.prod.js",
     "build:prod:withstats":
@@ -34,6 +34,7 @@
     "cross-env": "^5.1.1",
     "eslint": "^4.18.1",
     "eslint-plugin-react": "^7.7.0",
+    "html-webpack-plugin": "webpack-contrib/html-webpack-plugin",
     "jest-cli": "^22.4.2",
     "react-hot-loader": "^4.0.0",
     "react-intl-translations-manager": "^5.0.1",

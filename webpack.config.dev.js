@@ -1,5 +1,6 @@
 const webpack = require('webpack')
 const path = require('path')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 const devConfig = {
   mode: 'development',
@@ -10,9 +11,8 @@ const devConfig = {
     './src/client/main.js'
   ],
   output: {
-    path: path.join(__dirname, 'public/dist'),
+    path: path.join(__dirname, 'dist'),
     filename: 'app.js',
-    publicPath: '/dist/',
     pathinfo: true // Include comments with information about the modules.
   },
   module: {
@@ -27,6 +27,10 @@ const devConfig = {
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NoEmitOnErrorsPlugin(),
+    new HtmlWebpackPlugin({
+      template: path.join(__dirname, 'src', 'client', 'index.tmpl.html')
+    }),
+    new webpack.BannerPlugin('Copyright Flying Unicorns inc.'),
     new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/)
   ]
 }
