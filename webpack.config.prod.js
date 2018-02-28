@@ -16,22 +16,10 @@ const prodConfig = {
         test: /\.jsx?/,
         use: 'babel-loader',
         exclude: /node_modules/
-      },
-      {
-        test: /\.json$/,
-        loader: 'json-loader'
       }
     ]
   },
-  plugins: [
-    new webpack.NoEmitOnErrorsPlugin(),
-    new webpack.DefinePlugin({
-      'process.env': {
-        NODE_ENV: JSON.stringify('production')
-      }
-    }),
-    new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/)
-  ]
+  plugins: [new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/)]
 }
 
 module.exports = prodConfig

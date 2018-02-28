@@ -25,7 +25,6 @@ const devConfig = {
     ]
   },
   plugins: [
-    new webpack.NamedModulesPlugin(), // to make it easier to see which dependencies are being patched
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NoEmitOnErrorsPlugin(),
     new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/)
