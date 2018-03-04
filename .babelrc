@@ -1,6 +1,18 @@
 {
-  "presets": ["react", "es2015", "stage-0"],
+  "presets": [
+    "react",
+    [
+      "env",
+      {
+        "useBuiltIns": "entry",
+        "targets": {
+          "browsers": ["> 0.5% in DE"]
+        }
+      }
+    ]
+  ],
   "plugins": [
+    "transform-class-properties",
     "react-hot-loader/babel",
     [
       "react-intl",

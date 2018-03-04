@@ -1,14 +1,15 @@
 {
+  "parser": "babel-eslint",
   "env": {
     "browser": true,
     "commonjs": true,
-    "es6": true,
     "node": true
   },
   "extends": ["eslint:recommended", "plugin:react/recommended"],
   "parserOptions": {
+    "ecmaVersion": 2017,
     "ecmaFeatures": {
-      "experimentalObjectRestSpread": true,
+      "impliedStrict": true, // enable global strict mode (if ecmaVersion is 5 or greater)
       "jsx": true
     },
     "sourceType": "module"

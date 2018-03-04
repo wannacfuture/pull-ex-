@@ -1,3 +1,6 @@
+// Import global polyfill (replaced with specific imports by babel-preset-env)
+import 'babel-polyfill'
+
 // Import React
 import React from 'react'
 import ReactDOM from 'react-dom'
