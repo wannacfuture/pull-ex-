@@ -1,7 +1,8 @@
 {
   "name": "jahe-react-starter-2",
   "version": "1.0.0",
-  "description": "React Starter Project v2 - Similar to v1 but with Styled Components rather than SASS",
+  "description":
+    "React Starter Project v2 - Similar to v1 but with Styled Components rather than SASS",
   "repository": {
     "type": "git",
     "url": "https://github.com/jahe/jahe-react-starter-2.git"
@@ -9,13 +10,13 @@
   "scripts": {
     "start": "node devserver.js",
     "build:clean": "rimraf ./dist",
-    "build:prod": "npm run build:clean && cross-env NODE_ENV=production webpack --config webpack.config.prod.js",
-    "build:prod:withstats": "npm run build:clean && cross-env NODE_ENV=production webpack --config webpack.config.prod.js --profile --json > webpack-stats.json",
+    "build:prod":
+      "npm run build:clean && cross-env NODE_ENV=production webpack --config webpack.config.prod.js",
+    "build:prod:withstats":
+      "npm run build:clean && cross-env NODE_ENV=production webpack --config webpack.config.prod.js --profile --json > webpack-stats.json",
     "test": "jest --coverage",
     "watch:test": "jest --watch",
-    "manage:translations": "babel-node ./translationRunner.js",
-    "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "manage:translations": "babel-node ./translationRunner.js"
   },
   "author": "Jannik Hell",
   "license": "MIT",
@@ -63,8 +64,6 @@
   },
   "jest": {
     "testEnvironment": "node",
-    "collectCoverageFrom": [
-      "src/client/**/*.js"
-    ]
+    "collectCoverageFrom": ["src/client/**/*.js"]
   }
 }
