@@ -4,7 +4,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 const devConfig = {
   mode: 'development',
-  devtool: 'eval',
+  devtool: 'cheap-module-eval-source-map',
   entry: [
     'webpack-dev-server/client?http://localhost:3333',
     'webpack/hot/only-dev-server',
@@ -15,11 +15,19 @@ const devConfig = {
     filename: 'app.js',
     pathinfo: true // Include comments with information about the modules.
   },
+  resolve: {
+    extensions: ['.ts', '.tsx', '.js']
+  },
   module: {
     rules: [
       {
         test: /\.jsx?/,
         use: ['babel-loader'],
+        exclude: /node_modules/
+      },
+      {
+        test: /\.tsx?$/,
+        use: ['babel-loader', 'ts-loader'],
         exclude: /node_modules/
       }
     ]
@@ -30,7 +38,7 @@ const devConfig = {
     new HtmlWebpackPlugin({
       template: path.join(__dirname, 'src', 'client', 'index.tmpl.html')
     }),
-    new webpack.BannerPlugin('Copyright Flying Unicorns inc.'),
+    new webpack.BannerPlugin('DEV (╯°□°）╯︵ ┻━┻'),
     new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/)
   ]
 }

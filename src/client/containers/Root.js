@@ -6,7 +6,7 @@ import { IntlProvider } from 'react-intl'
 import { Provider } from 'react-redux'
 
 // Import our Component
-import HelloWorld from '../components/HelloWorld.js'
+import HelloWorld from '../components/HelloWorld'
 
 // Mark your root component as hot-exported
 import { hot } from 'react-hot-loader'

@@ -1,6 +1,6 @@
-import React from 'react'
+import * as React from 'react'
 import { FormattedRelative, FormattedMessage } from 'react-intl'
-import moment from 'moment'
+import * as moment from 'moment'
 import styled from 'styled-components'
 import { fetchGists } from '../util/api.js'
 
@@ -9,7 +9,15 @@ const HelloMessage = styled.span`
   display: flex;
 `
 
-export default class HelloWorld extends React.Component {
+export interface HelloProps {}
+export interface HelloState {
+  gists: string
+}
+
+export default class HelloWorld extends React.Component<
+  HelloProps,
+  HelloState
+> {
   state = {
     gists: ''
   }
