@@ -1,6 +1,6 @@
 # Jahe React Starter 2
 
-A starter project for React 16.2, TypeScript 2.8 (🔥), Redux, Webpack 4 (🔥), Styled Components, i18n, ESLint
+A starter project for React 16.2, 🔥 TypeScript 2.8, Redux, 🔥 Webpack 4, Styled Components, i18n, ESLint
 
 # Getting Started
 
