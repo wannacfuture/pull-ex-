@@ -5,6 +5,9 @@ import { IntlProvider } from 'react-intl'
 // Import Redux Store Provider Component
 import { Provider } from 'react-redux'
 
+// Import our TypeScript Playground
+import TypeScriptPlayground from '../components/TypeScriptPlayground'
+
 // Import our Component
 import HelloWorld from '../components/HelloWorld'
 
@@ -39,6 +42,8 @@ class Root extends React.Component {
               <option value="en">English</option>
               <option value="fr">Francaise</option>
             </select>
+
+            <TypeScriptPlayground />
           </div>
         </Provider>
       </IntlProvider>

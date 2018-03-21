@@ -1,6 +1,13 @@
 {
   "compilerOptions": {
+    "target": "ESNEXT",
+    "module": "ESNext",
+    "moduleResolution": "node",
+    "pretty": true,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
     "sourceMap": true,
-    "jsx": "preserve"
+    "jsx": "preserve",
+    "strict": false
   }
 }

@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { FormattedRelative, FormattedMessage } from 'react-intl'
-import * as moment from 'moment'
+const moment = require('moment')
 import styled from 'styled-components'
 import { fetchGists } from '../util/api.js'
 

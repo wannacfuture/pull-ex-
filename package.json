@@ -1,8 +1,7 @@
 {
   "name": "jahe-react-starter-2",
   "version": "1.0.0",
-  "description":
-    "React Starter Project v2 - Similar to v1 but with Styled Components rather than SASS",
+  "description": "React Starter Project v2 - Similar to v1 but with Styled Components rather than SASS",
   "repository": {
     "type": "git",
     "url": "https://github.com/jahe/jahe-react-starter-2.git"
@@ -10,10 +9,8 @@
   "scripts": {
     "start": "node devserver.js",
     "build:clean": "rimraf ./dist",
-    "build:prod":
-      "npm run build:clean && cross-env NODE_ENV=production webpack --config webpack.config.prod.js",
-    "build:prod:withstats":
-      "npm run build:clean && cross-env NODE_ENV=production webpack --config webpack.config.prod.js --profile --json > webpack-stats.json",
+    "build:prod": "npm run build:clean && cross-env NODE_ENV=production webpack --config webpack.config.prod.js",
+    "build:prod:withstats": "npm run build:clean && cross-env NODE_ENV=production webpack --config webpack.config.prod.js --profile --json > webpack-stats.json",
     "test": "jest --coverage",
     "watch:test": "jest --watch",
     "manage:translations": "babel-node ./translationRunner.js"
@@ -34,6 +31,7 @@
     "babel-preset-react": "^6.23.0",
     "cross-env": "^5.1.1",
     "cypress": "2.1.0",
+    "error-overlay-webpack-plugin": "0.1.4",
     "eslint": "4.18.2",
     "eslint-plugin-react": "^7.7.0",
     "html-webpack-plugin": "3.0.4",
@@ -42,7 +40,8 @@
     "react-intl-translations-manager": "^5.0.1",
     "rimraf": "^2.6.1",
     "ts-loader": "4.0.1",
-    "typescript": "2.8.0-dev.20180302",
+    "typescript": "2.8.0-dev.20180316",
+    "typescript-eslint-parser": "14.0.0",
     "webpack": "4.1.0",
     "webpack-cli": "2.0.10",
     "webpack-dev-server": "3.1.0"
@@ -64,6 +63,8 @@
   },
   "jest": {
     "testEnvironment": "node",
-    "collectCoverageFrom": ["src/client/**/*.js"]
+    "collectCoverageFrom": [
+      "src/client/**/*.js"
+    ]
   }
 }
